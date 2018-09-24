@@ -1,0 +1,15 @@
+<?php
+
+namespace MyFW\app;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Users extends Model
+{
+    public $timestamps = false;
+
+    public function role()
+    {
+        return $this->belongsTo('MyFW\App\Roles', 'roles_id');
+    }
+}
